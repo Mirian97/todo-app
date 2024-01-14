@@ -1,3 +1,4 @@
+import '@/i18n'
 import Router from '@/router'
 import store from '@/store'
 import '@/styles/index.css'
