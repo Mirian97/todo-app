@@ -11,8 +11,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
     en,
     pt
   },
-  fallbackLng: 'pt',
-  debug: true
+  fallbackLng: 'pt'
 })
 
 export default (language: string | undefined | null) => i18n.getFixedT(language || systemLocale)
