@@ -40,4 +40,16 @@ button {
   @apply scale-100;
 }
 
+.loading-text-shadow {
+  text-shadow:
+    2px 0 #009ddd,
+    -2px 0 #009ddd,
+    0 2px #009ddd,
+    0 -2px #009ddd,
+    1px 1px #009ddd,
+    -1px -1px #009ddd,
+    1px -1px #009ddd,
+    -1px 1px #009ddd;
+}
+
 @tailwind utilities;
