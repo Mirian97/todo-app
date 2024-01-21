@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'cloud-pattern': 'url("/src/assets/svgs/cloud-pattern.svg")'
+      },
       colors: {
         primary: {
           50: '#D1E6FF',
