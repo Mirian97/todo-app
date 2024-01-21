@@ -52,4 +52,15 @@ button {
     -1px 1px #009ddd;
 }
 
+.header {
+  position: absolute;
+  width: 488px;
+  height: 488px;
+  border-radius: 488px;
+  background: linear-gradient(180deg, #fff 43.21%, #67adff 102.46%);
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @tailwind utilities;
