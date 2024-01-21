@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom'
 
 const Hero: FC = () => {
   const navigate = useNavigate()
+  const navigateSignUpPage = () => navigate('/sign-up')
+  const navigateLoginPage = () => navigate('/login')
 
   return (
     <div className='flex min-h-full w-screen flex-col items-center justify-center bg-gradient-to-b from-primary-300 to-primary-50 px-14 pb-14 pt-12 text-base text-white'>
@@ -20,16 +22,15 @@ const Hero: FC = () => {
       <Button
         buttonText='Sign Up'
         className='max-w-80'
-        onClick={() => {
-          navigate('/sign-up')
-        }}
+        onClick={navigateSignUpPage}
       />
       <Link
         linkText='Already a member ?'
         className='mb-4 mt-10'
         color='tertiary'
+        onClick={navigateSignUpPage}
       />
-      <Link linkText='Sign In' color='secondary' />
+      <Link linkText='Sign In' color='secondary' onClick={navigateLoginPage} />
     </div>
   )
 }
