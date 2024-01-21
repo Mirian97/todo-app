@@ -28,24 +28,16 @@ button {
 
 @tailwind components;
 
-a:after {
-  display: block;
-  content: '';
-  border-bottom: solid 3px #019fb6;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
+.custom-link {
+  @apply font-medium leading-6;
 }
 
-a:hover:after {
-  transform: scaleX(1);
+.custom-link:after {
+  @apply block scale-x-0 transform border-2 border-solid border-current transition-all duration-300 ease-in-out content-[""];
 }
 
-a.fromRight:after {
-  transform-origin: 100% 50%;
-}
-
-a.fromLeft:after {
-  transform-origin: 0% 50%;
+.custom-link:hover:after {
+  @apply scale-100;
 }
 
 @tailwind utilities;
