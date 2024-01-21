@@ -1,6 +1,6 @@
-import { FC, LinkHTMLAttributes } from 'react'
+import { AnchorHTMLAttributes, FC } from 'react'
 
-interface ILink extends LinkHTMLAttributes<HTMLLinkElement> {
+interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   linkText: string
   color?: 'primary' | 'secondary' | 'tertiary'
   animation?: 'fromCenter' | 'fromRight' | 'fromLeft'
@@ -19,7 +19,13 @@ const animationClasses = {
 }
 
 const Link: FC<ILink> = (props) => {
-  const { linkText, className, color = 'primary', animation = 'fromCenter' } = props
+  const {
+    linkText,
+    className,
+    color = 'primary',
+    animation = 'fromCenter',
+    ...rest
+  } = props
 
   return (
     <a
@@ -28,6 +34,7 @@ const Link: FC<ILink> = (props) => {
         ${colorClasses[color]}
         after:${animationClasses[animation]}
       `}
+      {...rest}
     >
       <span>{linkText}</span>
     </a>
