@@ -18,29 +18,6 @@ export default {
           500: '#494949',
           800: '#0D0D0D'
         }
-      },
-      animation: {
-        'tracking-in-expand': 'tracking-in-expand .5s ease-in-out 1 normal forwards',
-        'scale-in-background': 'scale-in-background .5s ease-in-out 1 normal'
-      },
-      keyframes: {
-        'tracking-in-expand': {
-          '0%': {
-            left: '50%',
-            width: 0
-          },
-          '100%': {
-            width: '100%'
-          }
-        },
-        'scale-in-background': {
-          '0%': {
-            height: 0
-          },
-          '100%': {
-            height: '102%'
-          }
-        }
       }
     }
   },
