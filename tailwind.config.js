@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'cloud-pattern': 'url("/src/assets/svgs/cloud-pattern.svg")'
+        'cloud-pattern': 'url("/src/assets/svgs/cloud-pattern.svg")',
+        'hero-page': 'linear-gradient(180deg, #7AB7FF 0%, #D1E6FF 100%)',
+        'header-logo': 'linear-gradient(180deg, #fff 43.21%, #67adff 102.46%)'
       },
       colors: {
         primary: {
