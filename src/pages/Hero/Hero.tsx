@@ -14,9 +14,9 @@ const Hero: FC = () => {
         </h5>
       </div>
       <SparkLogo className='my-auto' />
-      <Button />
-      <Link />
-      <a className='font-medium text-secondary-800'>Sign In</a>
+      <Button buttonText='Sign Up' className='max-w-[400px]' />
+      <Link linkText='Already a member ?' className='mb-4 mt-10' color='tertiary' />
+      <Link linkText='Sign In' color='secondary' />
     </div>
   )
 }
