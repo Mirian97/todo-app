@@ -10,7 +10,7 @@ const Hero: FC = () => {
   const navigateLoginPage = () => navigate('/login')
 
   return (
-    <div className='flex min-h-full w-screen flex-col items-center justify-center bg-gradient-to-b from-primary-300 to-primary-50 px-14 pb-14 pt-12 text-base text-white'>
+    <div className='bg-hero-page flex min-h-full w-screen flex-col items-center justify-center px-14 pb-14 pt-12 text-base text-white'>
       <h4 className='font-extrabold'>Welcome to TASKSPARK+</h4>
       <div className='mt-4 min-h-[67px] max-w-80 text-center'>
         <h5>
