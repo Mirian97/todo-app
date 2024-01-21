@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 const Hero: FC = () => {
   return (
-    <div className='flex min-h-full w-screen flex-col items-center justify-center bg-gradient-to-b from-[#7AB7FF] to-[#D1E6FF] px-14 pb-16 pt-12 text-base text-white'>
+    <div className='from-primary-300 to-primary-50 flex min-h-full w-screen flex-col items-center justify-center bg-gradient-to-b px-14 pb-14 pt-12 text-base text-white'>
       <h4 className='font-extrabold'>Welcome to TASKSPARK+</h4>
       <div className='mt-4 min-h-[67px] max-w-80 text-center'>
         <h5>
@@ -16,11 +16,13 @@ const Hero: FC = () => {
         <span className='bg-primary-300 ease absolute inset-x-0 bottom-1/2 z-0 h-0 w-full translate-y-1/2 transition-[height] duration-300 group-hover:h-[102%]' />
         <span className='relative z-[1]'>Sign up</span>
       </button>
-      <button className='outlined-button' onClick={() => {}}>
-        <span className='relative z-[1]'>Already a member?</span>
-        <span className='fill'></span>
-      </button>
-      <button onClick={() => {}}>Sign In</button>
+
+      <a className='group relative mb-6 mt-10 cursor-pointer leading-5'>
+        <span>Already a member ?</span>
+        <hr className='group-hover:animate-tracking-in-expand absolute inset-x-0 h-[2px] w-0 bg-white' />
+      </a>
+
+      <a className='text-secondary-800 font-medium'>Sign In</a>
     </div>
   )
 }
