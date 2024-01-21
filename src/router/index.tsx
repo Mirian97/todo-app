@@ -1,3 +1,4 @@
+import LoadingPage from '@/components/LoadingPage/LoadingPage'
 import { lazy } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -19,6 +20,10 @@ const Router = createBrowserRouter([
   {
     path: '/sign-up',
     element: <SignUp />
+  },
+  {
+    path: '/loading',
+    element: <LoadingPage />
   }
 ])
 
