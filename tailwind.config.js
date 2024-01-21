@@ -5,9 +5,11 @@ export default {
     extend: {
       colors: {
         primary: {
+          50: '#D1E6FF',
           100: '#8AC0FF',
-          200: '#5ea8fb',
-          300: '#1882FF',
+          200: '#7AB7FF',
+          300: '#5ea8fb',
+          400: '#1882FF',
           500: '#587DFF'
         },
         secondary: {
@@ -15,6 +17,29 @@ export default {
           400: '#606060',
           500: '#494949',
           800: '#0D0D0D'
+        }
+      },
+      animation: {
+        'tracking-in-expand': 'tracking-in-expand .5s ease-in-out 1 normal forwards',
+        'scale-in-background': 'scale-in-background .5s ease-in-out 1 normal'
+      },
+      keyframes: {
+        'tracking-in-expand': {
+          '0%': {
+            left: '50%',
+            width: 0
+          },
+          '100%': {
+            width: '100%'
+          }
+        },
+        'scale-in-background': {
+          '0%': {
+            height: 0
+          },
+          '100%': {
+            height: '102%'
+          }
         }
       }
     }
