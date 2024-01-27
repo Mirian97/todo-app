@@ -27,29 +27,31 @@ const Login: FC = () => {
   const navigateToForgotPassword = () => navigate('/forgot-password')
 
   return (
-    <form className='flex flex-col items-center gap-y-8'>
-      <Input
-        value={username}
-        placeholder='Username'
-        startIcon={<UserIcon />}
-        onChange={(e) => {
-          inputFormLogin((draft) => {
-            draft.username = e.target.value
-          })
-        }}
-      />
-      <Input
-        value={password}
-        placeholder='Password'
-        type='password'
-        startIcon={<img src={SecureIcon} alt='Secure icon' />}
-        onChange={(e) => {
-          inputFormLogin((draft) => {
-            draft.password = e.target.value
-          })
-        }}
-      />
-      <div className='flex w-full justify-between px-3 text-secondary-300'>
+    <form className='flex h-full flex-col items-center pb-11'>
+      <div className='flex flex-col gap-y-8'>
+        <Input
+          value={username}
+          placeholder='Username'
+          startIcon={<UserIcon />}
+          onChange={(e) => {
+            inputFormLogin((draft) => {
+              draft.username = e.target.value
+            })
+          }}
+        />
+        <Input
+          value={password}
+          placeholder='Password'
+          type='password'
+          startIcon={<img src={SecureIcon} alt='Secure icon' />}
+          onChange={(e) => {
+            inputFormLogin((draft) => {
+              draft.password = e.target.value
+            })
+          }}
+        />
+      </div>
+      <div className='mt-6 flex w-full justify-between px-3 text-secondary-300'>
         <Checkbox label='Remember me' />
         <Link
           linkText='Forgot Password ?'
@@ -58,8 +60,14 @@ const Login: FC = () => {
           onClick={navigateToForgotPassword}
         />
       </div>
-      <Button buttonText='Sign In' type='submit' />
-      <AuxiliaryText>Don't You Have Account ?</AuxiliaryText>
+      <Button
+        buttonText='Sign In'
+        type='submit'
+        className='mt-auto sm:mt-[180px]'
+      />
+      <AuxiliaryText className='mb-7 mt-12'>
+        Don't You Have Account ?
+      </AuxiliaryText>
       <Link
         linkText='Sing Up for Free'
         color='primary'
