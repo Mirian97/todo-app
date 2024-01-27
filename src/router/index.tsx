@@ -6,6 +6,9 @@ const Hero = lazy(() => import('@/pages/Hero/Hero'))
 const Login = lazy(() => import('@/pages/Login/Login'))
 const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Error = lazy(() => import('@/pages/Error/Error'))
+const ForgotPassword = lazy(
+  () => import('@/pages/ForgotPassword/ForgotPassword')
+)
 
 const Router = createBrowserRouter([
   {
@@ -24,6 +27,10 @@ const Router = createBrowserRouter([
   {
     path: '/loading',
     element: <LoadingPage />
+  },
+  {
+    path: '/forgot-password',
+    element: <ForgotPassword />
   }
 ])
 
