@@ -1,7 +1,9 @@
 import SecureIcon from '@/assets/images/secure-icon.png'
 import UserIcon from '@/assets/svgs/user-icon.svg?react'
+import Button from '@/components/Button/Button'
 import HeaderWithLogo from '@/components/HeaderWithLogo/HeaderWithLogo'
 import Input from '@/components/Input/Input'
+import Link from '@/components/Link/Link'
 import { FC } from 'react'
 import { useImmer } from 'use-immer'
 
@@ -22,7 +24,7 @@ const Login: FC = () => {
   return (
     <div className='relative my-auto flex h-screen w-screen justify-center overflow-x-hidden'>
       <HeaderWithLogo />
-      <div className='flex flex-col gap-y-8 pt-60'>
+      <form className='flex flex-col items-center gap-y-8 pt-60'>
         <Input
           value={username}
           placeholder='Username'
@@ -44,7 +46,20 @@ const Login: FC = () => {
             })
           }}
         />
-      </div>
+        <div className='flex w-full justify-between px-3 text-secondary-300'>
+          <label className='flex cursor-pointer items-center gap-x-2'>
+            <input
+              type='checkbox'
+              className='rounded-sm border-black/60 text-primary-400 focus:ring-primary-400'
+            />
+            <span>Remerber me</span>
+          </label>
+          <Link linkText='Forgot Password ?' animation='fromLeft' />
+        </div>
+        <Button buttonText='Sign In' type='submit' />
+        <Link linkText="Don't You Have Account ?" color='secondary' />
+        <Link linkText='Sing Up for Free' color='primary' />
+      </form>
     </div>
   )
 }
