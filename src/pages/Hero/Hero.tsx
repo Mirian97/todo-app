@@ -24,6 +24,7 @@ const Hero: FC = () => {
         buttonText='Sign Up'
         className='max-w-80'
         onClick={navigateSignUpPage}
+        variant='outlined'
       />
       <AuxiliaryText className='mb-5 mt-10'>Already a member ?</AuxiliaryText>
       <Link linkText='Sign In' color='tertiary' onClick={navigateLoginPage} />
