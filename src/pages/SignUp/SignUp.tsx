@@ -10,16 +10,24 @@ import { FC } from 'react'
 import { useNavigate } from 'react-router'
 import { useImmer } from 'use-immer'
 
+interface ISignUpForm {
+  username: string
+  email: string
+  password: string
+  repeatPassword: string
+}
+
 const DEFAULT_SIGN_UP_FORM = {
   username: '',
   email: '',
   password: '',
-  repeatPassord: ''
+  repeatPassword: ''
 }
 
 const SignUp: FC = () => {
-  const [signUpForm, inputSignUpForm] = useImmer(DEFAULT_SIGN_UP_FORM)
-  const { username, email, password, repeatPassord } = signUpForm
+  const [signUpForm, inputSignUpForm] =
+    useImmer<ISignUpForm>(DEFAULT_SIGN_UP_FORM)
+  const { username, email, password, repeatPassword } = signUpForm
   const navigate = useNavigate()
   const navigateToSignIn = () => navigate('/login')
 
@@ -58,13 +66,13 @@ const SignUp: FC = () => {
           }}
         />
         <Input
-          value={repeatPassord}
+          value={repeatPassword}
           placeholder='Repeat Passwrod'
           type='password'
           startIcon={<img src={SecureIcon} alt='Secure icon' />}
           onChange={(e) => {
             inputSignUpForm((draft) => {
-              draft.repeatPassord = e.target.value
+              draft.repeatPassword = e.target.value
             })
           }}
         />
@@ -73,7 +81,7 @@ const SignUp: FC = () => {
         label='I agree to the Terms & conditions'
         className='ml-4 mt-4 self-start'
       />
-      <Button buttonText='Sign In' type='submit' className='mb-12 mt-10' />
+      <Button buttonText='Sign Up' type='submit' className='mb-12 mt-10' />
       <AuxiliaryText>Already have an account ?</AuxiliaryText>
       <Link
         linkText='Sign In from here'
