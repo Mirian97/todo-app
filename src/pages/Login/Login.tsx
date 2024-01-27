@@ -25,6 +25,7 @@ const Login: FC = () => {
   const { username, password } = formLogin
   const navigate = useNavigate()
   const navigateToSignUp = () => navigate('/sign-up')
+  const navigateToForgotPassword = () => navigate('/forgot-password')
 
   return (
     <div className='relative my-auto flex h-screen w-screen justify-center overflow-x-hidden'>
@@ -53,7 +54,12 @@ const Login: FC = () => {
         />
         <div className='flex w-full justify-between px-3 text-secondary-300'>
           <Checkbox label='Remember me' />
-          <Link linkText='Forgot Password ?' animation='fromRight' size='sm' />
+          <Link
+            linkText='Forgot Password ?'
+            animation='fromRight'
+            size='sm'
+            onClick={navigateToForgotPassword}
+          />
         </div>
         <Button buttonText='Sign In' type='submit' />
         <AuxiliaryText>Don't You Have Account ?</AuxiliaryText>
