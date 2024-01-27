@@ -17,7 +17,7 @@ const Input: FC<IInput> = (props) => {
   }
 
   const renderPasswordButton = () => (
-    <button onClick={togglePassword}>
+    <button onClick={togglePassword} type='button'>
       {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
     </button>
   )
