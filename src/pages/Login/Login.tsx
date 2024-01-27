@@ -53,7 +53,7 @@ const Login: FC = () => {
         />
         <div className='flex w-full justify-between px-3 text-secondary-300'>
           <Checkbox label='Remember me' />
-          <Link linkText='Forgot Password ?' animation='fromLeft' />
+          <Link linkText='Forgot Password ?' animation='fromRight' size='sm' />
         </div>
         <Button buttonText='Sign In' type='submit' />
         <AuxiliaryText>Don't You Have Account ?</AuxiliaryText>
