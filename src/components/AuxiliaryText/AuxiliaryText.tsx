@@ -1,11 +1,26 @@
 import { FC, HTMLAttributes } from 'react'
 
-interface IAuxialiaryText extends HTMLAttributes<HTMLHeadingElement> {}
+interface IAuxialiaryText extends HTMLAttributes<HTMLHeadingElement> {
+  color?: 'primary' | 'secondary' | 'tertiary'
+}
+
+const colorClasses = {
+  primary: 'text-primary-300',
+  secondary: 'text-secondary-400',
+  tertiary: 'text-white'
+}
 
 const AuxiliaryText: FC<IAuxialiaryText> = (props) => {
-  const { children, className, ...restProps } = props
+  const { children, className, color = 'secondary', ...restProps } = props
   return (
-    <h6 className={`text-base text-secondary-400 ${className}`} {...restProps}>
+    <h6
+      className={`
+        text-base
+        ${className}
+        ${colorClasses[color]}
+      `}
+      {...restProps}
+    >
       {children}
     </h6>
   )
