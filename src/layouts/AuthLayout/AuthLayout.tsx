@@ -5,7 +5,9 @@ const AuthLayout = () => {
   return (
     <div className='relative my-auto flex h-screen w-screen justify-center overflow-x-hidden'>
       <HeaderWithLogo />
-      <Outlet />
+      <div className='pt-60'>
+        <Outlet />
+      </div>
     </div>
   )
 }
