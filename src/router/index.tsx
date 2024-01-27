@@ -1,4 +1,5 @@
 import LoadingPage from '@/components/LoadingPage/LoadingPage'
+import AuthLayout from '@/layouts/AuthLayout/AuthLayout'
 import { lazy } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -17,20 +18,26 @@ const Router = createBrowserRouter([
     errorElement: <Error />
   },
   {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/sign-up',
-    element: <SignUp />
+    element: <AuthLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'sign-up',
+        element: <SignUp />
+      },
+      {
+        path: 'forgot-password',
+        element: <ForgotPassword />
+      }
+    ]
   },
   {
     path: '/loading',
     element: <LoadingPage />
-  },
-  {
-    path: '/forgot-password',
-    element: <ForgotPassword />
   }
 ])
 
