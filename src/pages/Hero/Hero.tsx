@@ -26,8 +26,10 @@ const Hero: FC = () => {
         onClick={navigateSignUpPage}
         variant='outlined'
       />
-      <AuxiliaryText className='mb-5 mt-10'>Already a member ?</AuxiliaryText>
-      <Link linkText='Sign In' color='tertiary' onClick={navigateLoginPage} />
+      <AuxiliaryText className='mb-5 mt-10' color='tertiary'>
+        Already a member ?
+      </AuxiliaryText>
+      <Link linkText='Sign In' color='secondary' onClick={navigateLoginPage} />
     </div>
   )
 }
