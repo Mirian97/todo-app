@@ -1,5 +1,6 @@
 import SecureIcon from '@/assets/images/secure-icon.png'
 import UserIcon from '@/assets/svgs/user-icon.svg?react'
+import AuxiliaryText from '@/components/AuxiliaryText/AuxiliaryText'
 import Button from '@/components/Button/Button'
 import Checkbox from '@/components/Checkbox/Checkbox'
 import HeaderWithLogo from '@/components/HeaderWithLogo/HeaderWithLogo'
@@ -55,7 +56,7 @@ const Login: FC = () => {
           <Link linkText='Forgot Password ?' animation='fromLeft' />
         </div>
         <Button buttonText='Sign In' type='submit' />
-        <Link linkText="Don't You Have Account ?" color='secondary' />
+        <AuxiliaryText>Don't You Have Account ?</AuxiliaryText>
         <Link
           linkText='Sing Up for Free'
           color='primary'
