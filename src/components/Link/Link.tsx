@@ -4,6 +4,7 @@ interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   linkText: string
   color?: 'primary' | 'secondary' | 'tertiary'
   animation?: 'fromCenter' | 'fromRight' | 'fromLeft'
+  size?: 'sm' | 'md'
 }
 
 const colorClasses = {
@@ -18,12 +19,18 @@ const animationClasses = {
   fromLeft: 'origin-bottom-right'
 }
 
+const sizeClasses = {
+  sm: 'text-sm',
+  md: 'text-base'
+}
+
 const Link: FC<ILink> = (props) => {
   const {
     linkText,
     className,
     color = 'primary',
     animation = 'fromCenter',
+    size = 'md',
     ...rest
   } = props
 
@@ -32,6 +39,7 @@ const Link: FC<ILink> = (props) => {
       className={`custom-link
         ${className}
         ${colorClasses[color]}
+        ${sizeClasses[size]}
         after:${animationClasses[animation]}
       `}
       {...rest}

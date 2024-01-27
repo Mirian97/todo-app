@@ -1,4 +1,5 @@
 import SparkLogo from '@/assets/svgs/spark-logo.svg?react'
+import AuxiliaryText from '@/components/AuxiliaryText/AuxiliaryText'
 import Button from '@/components/Button/Button'
 import Link from '@/components/Link/Link'
 import { FC } from 'react'
@@ -10,7 +11,7 @@ const Hero: FC = () => {
   const navigateLoginPage = () => navigate('/login')
 
   return (
-    <div className='bg-hero-page flex min-h-full w-screen flex-col items-center justify-center px-14 pb-14 pt-12 text-base text-white'>
+    <div className='flex min-h-full w-screen flex-col items-center justify-center bg-hero-page px-14 pb-14 pt-12 text-base text-white'>
       <h4 className='font-extrabold'>Welcome to TASKSPARK+</h4>
       <div className='mt-4 min-h-[67px] max-w-80 text-center'>
         <h5>
@@ -23,13 +24,11 @@ const Hero: FC = () => {
         buttonText='Sign Up'
         className='max-w-80'
         onClick={navigateSignUpPage}
+        variant='outlined'
       />
-      <Link
-        linkText='Already a member ?'
-        className='mb-4 mt-10'
-        color='tertiary'
-        onClick={navigateSignUpPage}
-      />
+      <AuxiliaryText className='mb-5 mt-10' color='tertiary'>
+        Already a member ?
+      </AuxiliaryText>
       <Link linkText='Sign In' color='secondary' onClick={navigateLoginPage} />
     </div>
   )
