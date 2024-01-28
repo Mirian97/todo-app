@@ -40,7 +40,7 @@ button {
   @apply scale-100;
 }
 
-.custom-link.no-animation:hover:after {
+.custom-link.link-no-animation:hover:after {
   @apply scale-x-0;
 }
 

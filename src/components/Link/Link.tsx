@@ -42,7 +42,7 @@ const Link: FC<ILink> = (props) => {
         ${className}
         ${colorClasses[color]}
         ${sizeClasses[size]}
-        ${noAnimation && 'no-animation'}
+        ${noAnimation && 'link-no-animation'}
         after:${animationClasses[animation]}
       `}
       {...rest}
