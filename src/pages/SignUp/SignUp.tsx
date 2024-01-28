@@ -30,6 +30,7 @@ const SignUp: FC = () => {
   const { username, email, password, repeatPassword } = signUpForm
   const navigate = useNavigate()
   const navigateToSignIn = () => navigate('/login')
+  const navigateToTermsAndConditions = () => navigate('/terms-and-conditions')
 
   return (
     <form className='flex h-full flex-col items-center'>
@@ -80,12 +81,13 @@ const SignUp: FC = () => {
           }}
         />
       </div>
-      <Checkbox label='I agree to the' className='mb-10 ml-4 mt-4 self-start'>
+      <Checkbox label='I agree to the ' className='mb-10 ml-4 mt-4 self-start'>
         <Link
-          linkText=' Terms & conditions'
+          linkText='Terms & conditions'
           color='primary'
           size='sm'
           noAnimation={true}
+          onClick={navigateToTermsAndConditions}
         />
       </Checkbox>
       <Button
