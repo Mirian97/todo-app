@@ -5,7 +5,7 @@ interface ICheckbox extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Checkbox: FC<ICheckbox> = (props) => {
-  const { label, className, ...restProps } = props
+  const { label, className, children, ...restProps } = props
   return (
     <label className={`flex cursor-pointer items-start gap-x-2 ${className}`}>
       <input
@@ -13,7 +13,10 @@ const Checkbox: FC<ICheckbox> = (props) => {
         className='rounded-sm border-black/60 text-primary-400 focus:ring-primary-400'
         {...restProps}
       />
-      <span className='text-sm'>{label}</span>
+      <span className='text-sm'>
+        {label}
+        {children}
+      </span>
     </label>
   )
 }
