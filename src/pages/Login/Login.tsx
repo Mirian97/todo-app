@@ -63,7 +63,7 @@ const Login: FC = () => {
       <Button
         buttonText='Sign In'
         type='submit'
-        className='mt-auto sm:mt-[180px]'
+        className='mt-auto sm:mt-[80px]'
       />
       <AuxiliaryText className='mb-7 mt-12'>
         Don't You Have Account ?
