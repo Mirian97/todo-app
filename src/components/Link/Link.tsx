@@ -5,6 +5,7 @@ interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   color?: 'primary' | 'secondary' | 'tertiary'
   animation?: 'fromCenter' | 'fromRight' | 'fromLeft'
   size?: 'sm' | 'md'
+  noAnimation?: boolean
 }
 
 const colorClasses = {
@@ -31,6 +32,7 @@ const Link: FC<ILink> = (props) => {
     color = 'primary',
     animation = 'fromCenter',
     size = 'md',
+    noAnimation = false,
     ...rest
   } = props
 
@@ -40,6 +42,7 @@ const Link: FC<ILink> = (props) => {
         ${className}
         ${colorClasses[color]}
         ${sizeClasses[size]}
+        ${noAnimation && 'no-animation'}
         after:${animationClasses[animation]}
       `}
       {...rest}
