@@ -8,8 +8,8 @@ const Login = lazy(() => import('@/pages/Login/Login'))
 const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Error = lazy(() => import('@/pages/Error/Error'))
 const Welcome = lazy(() => import('@/pages/Welcome/Welcome'))
-const ForgotPassword = lazy(
-  () => import('@/pages/ForgotPassword/ForgotPassword')
+const ForgetPassword = lazy(
+  () => import('@/pages/ForgetPassword/ForgetPassword')
 )
 const TermsAndConditions = lazy(
   () => import('@/pages/TermsAndConditions/TermsAndConditions')
@@ -35,7 +35,7 @@ const Router = createBrowserRouter([
       },
       {
         path: 'forgot-password',
-        element: <ForgotPassword />
+        element: <ForgetPassword />
       },
       {
         path: 'terms-and-conditions',
