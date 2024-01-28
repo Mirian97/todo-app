@@ -23,7 +23,7 @@ const Input: FC<IInput> = (props) => {
   )
 
   return (
-    <label className='flex w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300'>
+    <label className='flex min-h-[54px] w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300'>
       {startIcon}
       <input
         type={handleInputType()}
