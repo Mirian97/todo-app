@@ -32,7 +32,7 @@ const SignUp: FC = () => {
   const navigateToSignIn = () => navigate('/login')
 
   return (
-    <form className='flex flex-col items-center'>
+    <form className='flex h-full flex-col items-center'>
       <AuxiliaryText size='lg' color='primary' className='mb-6'>
         Create Account
       </AuxiliaryText>
@@ -82,9 +82,13 @@ const SignUp: FC = () => {
       </div>
       <Checkbox
         label='I agree to the Terms & conditions'
-        className='ml-4 mt-4 self-start'
+        className='mb-10 ml-4 mt-4 self-start'
       />
-      <Button buttonText='Sign Up' type='submit' className='mb-12 mt-8' />
+      <Button
+        buttonText='Sign Up'
+        type='submit'
+        className='mb-12 mt-auto sm:mt-0'
+      />
       <AuxiliaryText>Already have an account ?</AuxiliaryText>
       <Link
         linkText='Sign In from here'
