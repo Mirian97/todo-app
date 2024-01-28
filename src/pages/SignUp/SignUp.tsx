@@ -100,7 +100,7 @@ const SignUp: FC = () => {
         linkText='Sign In from here'
         color='primary'
         onClick={navigateToSignIn}
-        className='mb-10 mt-6'
+        className='pb-11 pt-6'
       />
     </form>
   )
