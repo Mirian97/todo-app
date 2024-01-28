@@ -33,7 +33,10 @@ const SignUp: FC = () => {
 
   return (
     <form className='flex flex-col items-center'>
-      <div className='flex flex-col items-center gap-y-6'>
+      <AuxiliaryText size='lg' color='primary' className='mb-6'>
+        Create Account
+      </AuxiliaryText>
+      <div className='flex flex-col items-center gap-y-4'>
         <Input
           value={username}
           placeholder='Username'
@@ -81,7 +84,7 @@ const SignUp: FC = () => {
         label='I agree to the Terms & conditions'
         className='ml-4 mt-4 self-start'
       />
-      <Button buttonText='Sign Up' type='submit' className='mb-12 mt-10' />
+      <Button buttonText='Sign Up' type='submit' className='mb-12 mt-8' />
       <AuxiliaryText>Already have an account ?</AuxiliaryText>
       <Link
         linkText='Sign In from here'
