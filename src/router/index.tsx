@@ -10,6 +10,9 @@ const Error = lazy(() => import('@/pages/Error/Error'))
 const ForgotPassword = lazy(
   () => import('@/pages/ForgotPassword/ForgotPassword')
 )
+const TermsAndConditions = lazy(
+  () => import('@/pages/TermsAndConditions/TermsAndConditions')
+)
 
 const Router = createBrowserRouter([
   {
@@ -32,6 +35,10 @@ const Router = createBrowserRouter([
       {
         path: 'forgot-password',
         element: <ForgotPassword />
+      },
+      {
+        path: 'terms-and-conditions',
+        element: <TermsAndConditions />
       }
     ]
   },

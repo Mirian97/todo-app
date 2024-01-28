@@ -23,8 +23,8 @@ const Input: FC<IInput> = (props) => {
   )
 
   return (
-    <label className='flex w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300'>
-      {startIcon}
+    <label className='flex h-[50px] w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300'>
+      {startIcon && <div className='w-[31px] max-w-full'>{startIcon}</div>}
       <input
         type={handleInputType()}
         className='grow border-0 p-0 placeholder:text-black/40 focus:ring-transparent'
