@@ -7,6 +7,7 @@ const Hero = lazy(() => import('@/pages/Hero/Hero'))
 const Login = lazy(() => import('@/pages/Login/Login'))
 const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Error = lazy(() => import('@/pages/Error/Error'))
+const Welcome = lazy(() => import('@/pages/Welcome/Welcome'))
 const ForgotPassword = lazy(
   () => import('@/pages/ForgotPassword/ForgotPassword')
 )
@@ -39,6 +40,10 @@ const Router = createBrowserRouter([
       {
         path: 'terms-and-conditions',
         element: <TermsAndConditions />
+      },
+      {
+        path: 'welcome',
+        element: <Welcome />
       }
     ]
   },
