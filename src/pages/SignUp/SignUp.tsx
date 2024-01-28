@@ -80,10 +80,14 @@ const SignUp: FC = () => {
           }}
         />
       </div>
-      <Checkbox
-        label='I agree to the Terms & conditions'
-        className='mb-10 ml-4 mt-4 self-start'
-      />
+      <Checkbox label='I agree to the' className='mb-10 ml-4 mt-4 self-start'>
+        <Link
+          linkText=' Terms & conditions'
+          color='primary'
+          size='sm'
+          noAnimation={true}
+        />
+      </Checkbox>
       <Button
         buttonText='Sign Up'
         type='submit'
