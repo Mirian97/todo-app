@@ -13,7 +13,7 @@ const UpdatedPassword = () => {
         Your password has been updated!
       </p>
       <Button buttonText='Sign In Again' className='max-w-full' />
-      <SignUpFooter />
+      <SignUpFooter className='mt-auto sm:mt-0' />
     </div>
   )
 }
