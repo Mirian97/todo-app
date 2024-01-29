@@ -15,6 +15,9 @@ const ForgetPassword = lazy(
 const TermsAndConditions = lazy(
   () => import('@/pages/TermsAndConditions/TermsAndConditions')
 )
+const RecoverPassword = lazy(
+  () => import('@/pages/RecoverPassword/RecoverPassword')
+)
 
 const Router = createBrowserRouter([
   {
@@ -49,6 +52,10 @@ const Router = createBrowserRouter([
       {
         path: 'make-selection',
         element: <MakeSelection />
+      },
+      {
+        path: 'recover-password',
+        element: <RecoverPassword />
       }
     ]
   },
