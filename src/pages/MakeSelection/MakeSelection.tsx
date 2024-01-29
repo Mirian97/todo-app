@@ -5,14 +5,14 @@ import SignUpFooter from '@/sections/SignUpFooter/SignUpFooter'
 
 const MakeSelection = () => {
   return (
-    <div className='px-14'>
-      <h4 className='mt-3 text-left text-xl font-semibold tracking-wide text-black'>
+    <div className='-mt-4 flex h-full flex-col items-start px-14 sm:items-center'>
+      <h4 className='text-left text-xl font-semibold tracking-wide text-black'>
         Make Selection
       </h4>
-      <p className='text-left text-xs text-black/50'>
+      <p className='mb-6 mt-2 w-52 text-left text-xs text-black/50 sm:text-center'>
         Select which contact detail should use to reset your password
       </p>
-      <div className='flex flex-col gap-y-11'>
+      <div className='flex flex-col gap-y-5'>
         <MakeSelectionCard
           icon={<CellphoneIcon />}
           viaText='via SMS'
@@ -24,7 +24,7 @@ const MakeSelection = () => {
           viaData='gogulkrish84984@gmail.com'
         />
       </div>
-      <SignUpFooter />
+      <SignUpFooter className='mt-auto sm:mt-0' />
     </div>
   )
 }
