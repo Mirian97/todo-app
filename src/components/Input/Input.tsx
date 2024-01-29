@@ -7,7 +7,7 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input: FC<IInput> = (props) => {
-  const { startIcon, type, ...restProps } = props
+  const { startIcon, type, className, ...restProps } = props
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const togglePassword = () => setShowPassword((sp) => !sp)
 
@@ -23,7 +23,12 @@ const Input: FC<IInput> = (props) => {
   )
 
   return (
-    <label className='flex h-[50px] w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300'>
+    <label
+      className={`
+        flex h-[50px] w-full items-center gap-x-5 rounded-full border-2 border-solid border-secondary-500/40 px-3 py-2 focus-within:border-primary-300
+        ${className}
+      `}
+    >
       {startIcon && <div className='w-[31px] max-w-full'>{startIcon}</div>}
       <input
         type={handleInputType()}

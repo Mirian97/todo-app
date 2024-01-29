@@ -5,11 +5,12 @@ import { createBrowserRouter } from 'react-router-dom'
 
 const Hero = lazy(() => import('@/pages/Hero/Hero'))
 const Login = lazy(() => import('@/pages/Login/Login'))
-const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Error = lazy(() => import('@/pages/Error/Error'))
+const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Welcome = lazy(() => import('@/pages/Welcome/Welcome'))
-const ForgotPassword = lazy(
-  () => import('@/pages/ForgotPassword/ForgotPassword')
+const MakeSelection = lazy(() => import('@/pages/MakeSelection/MakeSelection'))
+const ForgetPassword = lazy(
+  () => import('@/pages/ForgetPassword/ForgetPassword')
 )
 const TermsAndConditions = lazy(
   () => import('@/pages/TermsAndConditions/TermsAndConditions')
@@ -34,8 +35,8 @@ const Router = createBrowserRouter([
         element: <SignUp />
       },
       {
-        path: 'forgot-password',
-        element: <ForgotPassword />
+        path: 'forget-password',
+        element: <ForgetPassword />
       },
       {
         path: 'terms-and-conditions',
@@ -44,6 +45,10 @@ const Router = createBrowserRouter([
       {
         path: 'welcome',
         element: <Welcome />
+      },
+      {
+        path: 'make-selection',
+        element: <MakeSelection />
       }
     ]
   },
