@@ -10,6 +10,9 @@ export default {
         'hero-page': 'linear-gradient(180deg, #7AB7FF 0%, #D1E6FF 100%)',
         'header-logo': 'linear-gradient(180deg, #fff 43.21%, #67adff 102.46%)'
       },
+      boxShadow: {
+        'make-selection': '0px 6px 4px 0px rgba(0, 0, 0, 0.25)'
+      },
       colors: {
         primary: {
           50: '#D1E6FF',
