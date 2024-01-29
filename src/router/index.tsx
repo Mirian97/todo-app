@@ -9,14 +9,17 @@ const Error = lazy(() => import('@/pages/Error/Error'))
 const SignUp = lazy(() => import('@/pages/SignUp/SignUp'))
 const Welcome = lazy(() => import('@/pages/Welcome/Welcome'))
 const MakeSelection = lazy(() => import('@/pages/MakeSelection/MakeSelection'))
-const ForgetPassword = lazy(
-  () => import('@/pages/ForgetPassword/ForgetPassword')
-)
 const TermsAndConditions = lazy(
   () => import('@/pages/TermsAndConditions/TermsAndConditions')
 )
+const ForgetPassword = lazy(
+  () => import('@/pages/ForgetPassword/ForgetPassword')
+)
 const RecoverPassword = lazy(
   () => import('@/pages/RecoverPassword/RecoverPassword')
+)
+const UpdatedPassword = lazy(
+  () => import('@/pages/UpdatedPassword/UpdatedPassword')
 )
 
 const Router = createBrowserRouter([
@@ -56,6 +59,10 @@ const Router = createBrowserRouter([
       {
         path: 'recover-password',
         element: <RecoverPassword />
+      },
+      {
+        path: 'updated-password',
+        element: <UpdatedPassword />
       }
     ]
   },
